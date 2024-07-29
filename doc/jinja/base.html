@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link href="{{ url_for('static',filename='css/reset.css') }}" rel="stylesheet" type="text/css" />
+
+  <title>{% block title %}{% endblock %} page</title>
+  {% block css %}{% endblock %}
+
+</head>
+
+<body>
+    {% block body %}{% endblock %}
+    <!-- 
+    file_html_name.html write not file format / 'file_html_name'  
+    -->
+    <a href="{{ url_for('file_html_name')}}">Page</a>
+
+    {% block script %}{% endblock %}
+    <script src="{{ url_for('static',filename='js/file_name.js') }}"></script>
+</body>
+</html>

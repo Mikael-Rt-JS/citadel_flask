@@ -1,0 +1,18 @@
+@main.route('/setsession')
+def setsession():
+    session['test']=666999
+    return render_template('home.html')
+
+@main.route('/delsession')
+def delsession():
+    session.pop('test',None)
+    return render_template('home.html')
+
+@main.route('/getsession')
+def getsession():
+    if 'test' in session:
+        sessionData=session['test']
+        return f"session: {sessionData}"
+    return f"No session!"
+
+    # конкатенация
