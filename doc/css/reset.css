@@ -7,6 +7,11 @@ https://webcademy.ru/blog/?s=reset
     padding: 0px;
     margin: 0px;
     border: none;
+    /* 
+  chrome://flags/
+  Smooth Scrolling -> enable
+  */
+  scroll-behavior: smooth;
   }
   
   *,
