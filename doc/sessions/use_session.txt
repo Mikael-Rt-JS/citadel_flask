@@ -1,3 +1,5 @@
+from flask import Flask,render_template,request,make_response,session,url_for
+
 @main.route('/setsession')
 def setsession():
     session['test']=666999
@@ -16,3 +18,11 @@ def getsession():
     return f"No session!"
 
     # конкатенация
+
+#================================================================================================
+#generate key
+import os
+
+#к примеру такой ключ
+main.config['SECRET_KEY']='3e807657127214ede4618d938d613d64083ea834'
+
