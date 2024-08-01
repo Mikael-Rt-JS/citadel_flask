@@ -1,0 +1,32 @@
+from flask import Flask,render_template,request,make_response,session,redirect
+
+main=Flask(__name__)
+main.config['SECRET_KEY']='3e807657127214ede4618d938d613d64083ea834'
+
+@main.route('/',methods=['POST','GET'])
+@main.route('/home',methods=['POST','GET'])
+@main.route('/index',methods=['POST','GET'])
+def home():
+    if request.method=='POST':
+        title=request.form['name']
+        
+        print(title)
+        # ввидке любое название ключа для передачи в шаблок можешь и массив
+        return render_template('home.html',name=title)
+    else:
+        return render_template('home.html')
+
+if __name__=="__main__":
+    main.run(debug=True)
+
+
+    #как вариант
+    /*
+    try:
+            print(title)
+            # ввидке любое название ключа для передачи в шаблок можешь и массив
+            return redirect('/',name=title)
+        except:
+            print("При добавлении произошла ошибка!:(")
+            return redirect('/')
+    */
