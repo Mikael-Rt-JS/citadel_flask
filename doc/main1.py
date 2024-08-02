@@ -35,6 +35,7 @@ def upload_file():
             # https://django.fun/docs/flask/2.2/patterns/fileuploads/
 
         #ОБЕЗОПАСИМ ФАЙЛОВУЮ СИСТЕМУ С ПОМОЩЬЮ secure_filename
+        #https://flask.palletsprojects.com/en/1.1.x/patterns/fileuploads/
         # загрузка одной картинки
         # file = request.files['files']
         # path = os.path.join(main.config['UPLOAD_FOLDER'], file.filename)
